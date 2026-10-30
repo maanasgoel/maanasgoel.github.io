@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maanas Goel</title>
+<meta name="description" content="Maanas Goel, electrical engineering and AI student at Penn, working where AI meets hardware, power, and capital.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans+Condensed:wght@500&family=Lora:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4EFE6; --ink:#1A1E23; --muted:#5B6168; --rule:#E2DACB;
+  --accent:#0E7A6A; --accent-soft:#DDEBE3;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --cond:"IBM Plex Sans Condensed","IBM Plex Sans",system-ui,sans-serif;
+  --serif:"Lora",Georgia,serif;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-text-size-adjust:100%}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px}
+
+/* Top navigation */
+header.top{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--rule)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+header.top .me{font-family:var(--serif);font-weight:600;font-size:18px;color:var(--ink);text-decoration:none;white-space:nowrap}
+header.top ul{list-style:none;margin:0;padding:0;display:flex;gap:24px;overflow-x:auto;scrollbar-width:none}
+header.top ul::-webkit-scrollbar{display:none}
+header.top ul a{color:var(--muted);text-decoration:none;font-size:15px;white-space:nowrap}
+header.top ul a:hover{color:var(--ink)}
+
+main.wrap{padding-top:64px;padding-bottom:48px}
+
+/* Hero: photo beside the headline */
+.note{margin:0 0 28px;padding:10px 16px;background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:2px}
+.hero{display:grid;grid-template-columns:168px 1fr;gap:40px;align-items:center}
+.photo{display:block;width:168px;height:168px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 5px var(--paper),0 0 0 6px var(--rule)}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4.4vw,3rem);line-height:1.13;letter-spacing:-.015em;margin:0 0 14px}
+.lede{color:var(--muted);font-size:18px;margin:0;max-width:44ch}
+
+/* The one memorable element: board to capital, along a power trace */
+.trace{margin:56px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.stop{position:relative;padding-top:30px}
+.stop::before{content:"";position:absolute;top:0;left:0;width:14px;height:14px;background:var(--paper);border:2px solid var(--accent);border-radius:2px}
+.stop:not(:last-child)::after{content:"";position:absolute;left:14px;right:-20px;top:6px;height:2px;background:var(--accent);transform-origin:left;animation:draw .45s cubic-bezier(.6,0,.2,1) both}
+.stop:nth-child(1)::after{animation-delay:.2s}.stop:nth-child(2)::after{animation-delay:.6s}.stop:nth-child(3)::after{animation-delay:1s}
+@keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes drawv{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@media (prefers-reduced-motion:reduce){.stop::after{animation:none!important}}
+.stop b{display:block;font-family:var(--cond);font-weight:500;font-size:15px;color:var(--accent);margin-bottom:4px}
+.stop span{display:block;font-size:14.5px;line-height:1.5;color:var(--muted)}
+
+section{padding-top:80px}
+h2{font-family:var(--serif);font-weight:600;font-size:25px;letter-spacing:-.005em;margin:0 0 22px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
+h3.group{font-family:var(--cond);font-weight:500;font-size:13.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:32px 0 4px}
+h3.group:first-of-type{margin-top:0}
+p{margin:0 0 18px}
+.about p{max-width:66ch}
+
+/* Rows: dates are a real sequence, so they get a column */
+.item{display:grid;grid-template-columns:136px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--rule)}
+.item:last-child{border-bottom:0}
+.when{font-family:var(--cond);font-weight:500;font-size:14.5px;color:var(--muted);padding-top:3px}
+.what h4{font-size:17px;font-weight:600;margin:0 0 6px;line-height:1.4}
+.what .org{color:var(--muted);font-size:15.5px;margin:2px 0 8px}
+.what p{margin:0;font-size:16px}
+.what ul{margin:0;padding-left:18px;font-size:16px}
+.what li{margin:4px 0}
+.what li::marker{color:var(--accent)}
+.what a.quiet{color:inherit;text-decoration-color:var(--muted);text-decoration-thickness:1px}
+.what a.quiet:hover{text-decoration-color:var(--ink)}
+.award{display:inline-block;margin-top:10px;font-size:14.5px;background:var(--accent-soft);color:var(--ink);padding:2px 10px;border-radius:3px}
+
+/* Projects: compact, one line of description each */
+.proj{padding:12px 0;border-bottom:1px solid var(--rule)}
+.proj:last-child{border-bottom:0}
+.proj h4{font-size:16.5px;font-weight:600;margin:0;line-height:1.45}
+.proj h4 a{color:inherit;text-decoration-color:var(--muted);text-decoration-thickness:1px}
+.proj h4 a:hover{text-decoration-color:var(--ink)}
+.proj h4 small{font-weight:400;color:var(--muted);font-size:14.5px;margin-left:6px}
+.proj p{margin:3px 0 0;font-size:15.5px;color:var(--muted);line-height:1.55}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:110px 1fr;gap:10px 24px;margin:0}
+.contact dt{font-family:var(--cond);font-weight:500;font-size:15px;color:var(--muted);padding-top:2px}
+.contact dd{margin:0}
+footer{margin-top:72px;padding:20px 0 40px;border-top:1px solid var(--rule);color:var(--muted);font-size:14px}
+
+@media (max-width:720px){
+  header.top .wrap{height:auto;padding-top:12px;padding-bottom:12px;flex-direction:column;align-items:flex-start;gap:6px}
+  header.top ul{gap:18px;width:100%}
+  html{scroll-padding-top:96px}
+  main.wrap{padding-top:36px}
+  .hero{grid-template-columns:1fr;gap:24px}
+  .photo{width:128px;height:128px}
+  .trace{grid-template-columns:1fr;gap:18px;padding-left:30px}
+  .stop{padding-top:0}
+  .stop::before{left:-30px}
+  .stop:not(:last-child)::after{left:-24px;right:auto;top:14px;bottom:-18px;width:2px;height:auto;transform-origin:top;animation-name:drawv}
+  .item{grid-template-columns:1fr;gap:4px}
+  .contact{grid-template-columns:1fr;gap:0}
+  .contact dd{margin-bottom:12px}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="me" href="/">Maanas Goel</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#honors">Honors</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+  <div class="hero">
+    <img class="photo" src="headshot.jpg" alt="Maanas Goel" width="168" height="168">
+    <div>
+      <h1 style="margin:0">I build where AI meets hardware, power, and capital.</h1>
+    </div>
+  </div>
+
+  <div class="trace" role="list" aria-label="Where my work sits">
+    <div class="stop" role="listitem"><b>Circuit board</b><span>AI for power delivery design, Apple</span></div>
+    <div class="stop" role="listitem"><b>Circuit simulation</b><span>Agentic AI that automates circuit simulation, Harvard</span></div>
+    <div class="stop" role="listitem"><b>Data center</b><span>Running AI workloads on curtailed solar, Harvard and Penn</span></div>
+    <div class="stop" role="listitem"><b>Capital</b><span>Investing in AI infrastructure: compute, memory, and power</span></div>
+  </div>
+
+  <section id="about" class="about">
+    <h2>About</h2>
+    <p>I'm Maanas, an engineer and researcher finishing my BS/MS in Electrical Engineering and Artificial Intelligence at the University of Pennsylvania. I spent most of 2026 at Apple as an AI/ML hardware engineer, building an AI tool that automates power delivery design for Mac circuit boards, work that earned a Best Paper Award at Apple's Modeling &amp; Simulation Conference. Today I work with Prof. Le Xie's lab at Harvard and Prof. Benjamin Lee at Penn on scheduling AI data centers around curtailed solar. Before that, I built agentic AI tools for circuit simulation with Prof. Xie's Power &amp; Agentic AI initiative in 2025, and spent three summers at MIT LIGO as a machine learning and hardware engineer on gravitational-wave physics research.</p>
+    <p>I like building systems, and I'm drawn to problems where logic and systems thinking can make something work better. My philosophy is to use that work to reduce human suffering, improve quality of life, and protect the resources we depend on, and to leave the world better than I found it. That draws me to AI infrastructure, where compute, memory, and power hold some of the hardest engineering problems and the largest capital decisions, and to using optimization and AI to design hardware. I'm interested in both building it and investing in it.</p>
+    <p>Outside of work, I like to lift, play basketball and cricket, and enjoy a good game of poker. I grew up in Boston and I'm now based in Menlo Park, California. I speak English and Hindi, and I'm learning Telugu and French.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+
+    <div class="item">
+      <div class="when">2026</div>
+      <div class="what">
+        <h4>AI/ML Hardware Engineer Intern, Apple</h4>
+        <p>Built an AI tool that automates power delivery design for Mac circuit boards, with circuit simulation running inside the design loop. A process that took about three months now takes under an hour.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="when">2025</div>
+      <div class="what">
+        <h4>Researcher, <a class="quiet" href="https://xielab.seas.harvard.edu/">Prof. Xie Lab</a>, Harvard University</h4>
+        <p>Team member on the <a href="https://poweragent.seas.harvard.edu/">Power &amp; Agentic AI Initiative</a>. Collaborated on MCP servers and multi-agent LangGraph orchestration that automate circuit simulation.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="when">2025</div>
+      <div class="what">
+        <h4>Hardware Engineer Intern, <a class="quiet" href="https://www.ligo.caltech.edu/MIT">MIT LIGO</a></h4>
+        <p>Designed a <a href="https://github.com/maanasgoel/MIT-LIGO-Piezo-Filter-Board">12-channel analog filter and switching network</a> for LIGO's piezo motor controls, from Altium schematics and PCB layout to microcontroller firmware.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="when">2024</div>
+      <div class="what">
+        <h4>Machine Learning Engineer Intern, <a class="quiet" href="https://www.ligo.caltech.edu/MIT">MIT LIGO</a></h4>
+        <p>Developed a <a href="https://github.com/maanasgoel/MIT-LIGO-Parameter-Splitting-Flows">parameter-splitting architecture</a> for gravitational-wave parameter estimation, with separate normalizing flows for intrinsic and extrinsic parameters.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="when">2023</div>
+      <div class="what">
+        <h4>Machine Learning Engineer Intern, <a class="quiet" href="https://www.ligo.caltech.edu/MIT">MIT LIGO</a></h4>
+        <p>Used self-supervised learning to <a href="https://github.com/maanasgoel/MIT-NeurIPS-Symmetry-Flows">teach normalizing flows the time-shift symmetry</a> of gravitational-wave signals. The work became a <a href="https://ml4physicalsciences.github.io/2023/files/NeurIPS_ML4PS_2023_69.pdf">NeurIPS 2023 paper</a> I co-authored.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="when">2023 – 2027</div>
+      <div class="what">
+        <h4>BS/MS Student, University of Pennsylvania</h4>
+        <p>BSE and MSE in Electrical Engineering, Artificial Intelligence. Courses include analog integrated circuit design, hardware/software co-design for machine learning, embedded systems, and time-series machine learning. I'm involved with the Physics Society and the Wharton Finance and Aerospace clubs. I've also served as an ML research assistant at xLab and a teaching assistant for Electromagnetics.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p class="note">Reports and code for all public projects are on <a href="https://github.com/maanasgoel">GitHub</a>.</p>
+
+    <h3 class="group">Power and hardware</h3>
+    <div class="proj">
+      <h4><a href="https://github.com/maanasgoel/SolarSprint">SolarSprint</a> <small>2026</small></h4>
+      <p>A scheduler for a solar- and battery-powered AI data center, building on Prof. Lee's Curtail to Compute study. On real AI job traces, it tripled the work completed over that study's baseline.</p>
+    </div>
+    <div class="proj">
+      <h4><a href="https://github.com/maanasgoel/Wideband-TIA-45nm">Wideband Transimpedance Amplifier</a> <small>2025</small></h4>
+      <p>A 45 nm CMOS amplifier for optical receivers, designed and simulated in Cadence, that beat every target spec.</p>
+    </div>
+    <div class="proj">
+      <h4><a href="https://github.com/maanasgoel/BrakeBright">BrakeBright</a> <small>2025</small></h4>
+      <p>A smart bike light that senses braking with a motion sensor, brightens automatically, and adjusts to ambient light.</p>
+    </div>
+    <div class="proj">
+      <h4><a href="https://github.com/maanasgoel/Beat-Frequency-Metal-Detector">Beat-Frequency Metal Detector</a> <small>2025</small></h4>
+      <p>A custom PCB that turns nearby metal into an audible tone, designed, simulated, built, and tested.</p>
+    </div>
+    <div class="proj">
+      <h4><a href="https://github.com/maanasgoel/EEase">EEase</a> <small>2025</small></h4>
+      <p>A local AI workbench for electrical engineers that runs LTspice simulations from plain English, solves problems from your own textbooks with citations, and writes lab reports.</p>
+    </div>
+
+    <h3 class="group">AI and machine learning</h3>
+    <div class="proj">
+      <h4><a href="https://github.com/maanasgoel/Robo-Analyst">Robo-Analyst</a> <small>2026</small></h4>
+      <p>LLM agents read SEC filings with company names hidden, and a blinded model makes each call. Finding: the LLM still recognized 97% of megacaps.</p>
+    </div>
+    <div class="proj">
+      <h4><a href="https://github.com/maanasgoel/Portfolio-Covariance-Forecasting">Dynamic Portfolio Optimization via Forecasted Covariances</a> <small>2025</small></h4>
+      <p>An LSTM forecasts how assets move together, and its portfolio beat portfolios built on classical models (Sharpe 0.49 vs −0.07).</p>
+    </div>
+    <div class="proj">
+      <h4><a href="https://github.com/maanasgoel/MoKE-Koopman-Experts">MoKE: Mixture of Koopman Experts</a> <small>2025</small></h4>
+      <p>Models nonlinear systems that switch between regimes, and stays stable on long predictions where standard methods diverged.</p>
+    </div>
+    <div class="proj">
+      <h4><a href="https://github.com/maanasgoel/HAWQ-V3-Reproduction">Reproducing HAWQ-V3</a> <small>2025</small></h4>
+      <p>Reproduced Hessian-based mixed-precision quantization on ResNet-18: a 41% smaller model for under 1 point of accuracy.</p>
+    </div>
+  </section>
+
+  <section id="honors">
+    <h2>Honors and Publications</h2>
+    <div class="item">
+      <div class="when">2026</div>
+      <div class="what"><h4>Best Paper Award, Apple Modeling &amp; Simulation Conference</h4><p>For AI-driven power delivery design. I was the only intern recipient</p></div>
+    </div>
+    <div class="item">
+      <div class="when">2023</div>
+      <div class="what"><h4><a class="quiet" href="https://ml4physicalsciences.github.io/2023/files/NeurIPS_ML4PS_2023_69.pdf">Optimizing Likelihood-free Inference using Self-supervised Neural Symmetry Embeddings</a></h4><p>Published at NeurIPS 2023, co-authored research with MIT LIGO</p></div>
+    </div>
+    <div class="item">
+      <div class="when">2022</div>
+      <div class="what"><h4>US Physics Olympiad (USAPhO) Semifinalist and Honorable Mention</h4><p>Top 200 in the US, and the <a class="quiet" href="https://drive.google.com/file/d/1xnkWYel7sw1a9W-F14M8zT9XqlbLlFlo/view?usp=sharing">first semifinalist in St. Paul's School history</a></p></div>
+    </div>
+    <div class="item">
+      <div class="when">2021</div>
+      <div class="what"><h4>American Invitational Mathematics Examination (AIME) Qualifier</h4><p>Score 6</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>I'm always happy to talk about AI infrastructure, power, or investing.</p>
+    <dl class="contact">
+      <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/maanas-goel/">linkedin.com/in/maanas-goel</a></dd>
+      <dt>GitHub</dt><dd><a href="https://github.com/maanasgoel">github.com/maanasgoel</a></dd>
+      <dt>Email</dt><dd><a href="mailto:maanasg@upenn.edu">maanasg@upenn.edu</a></dd>
+    </dl>
+  </section>
+
+  <footer>© 2026 Maanas Goel</footer>
+</main>
+</body>
+</html>

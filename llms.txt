@@ -1,0 +1,44 @@
+# Maanas Goel
+
+> Electrical engineer and researcher finishing a BS/MS in Electrical Engineering and Artificial Intelligence at the University of Pennsylvania (May 2027). Builds AI tools for hardware design and power, from circuit boards to data centers. Currently works with Prof. Le Xie's lab at Harvard and Prof. Benjamin Lee at Penn on scheduling AI data centers around curtailed solar. Based in Menlo Park, California.
+
+Website: https://maanasgoel.github.io
+LinkedIn: https://www.linkedin.com/in/maanas-goel/
+Email: maanasg@upenn.edu
+GitHub: https://github.com/maanasgoel
+
+## Experience
+
+- 2026, AI/ML Hardware Engineer Intern, Apple: built an AI tool that automates power delivery design for Mac circuit boards, with circuit simulation inside the design loop, cutting a three-month process to under an hour. Best Paper Award, Apple Modeling & Simulation Conference 2026, the only intern recipient.
+- 2025, Researcher, Prof. Le Xie's lab, Harvard University: team member on the Power & Agentic AI Initiative (https://poweragent.seas.harvard.edu/), building MCP servers and multi-agent LangGraph orchestration that automate circuit simulation.
+- 2025, Hardware Engineer Intern, MIT LIGO: designed a 12-channel analog filter and switching network for piezo motor controls, from Altium schematics and PCB layout to microcontroller firmware. https://github.com/maanasgoel/MIT-LIGO-Piezo-Filter-Board
+- 2024, Machine Learning Engineer Intern, MIT LIGO: developed a parameter-splitting architecture for gravitational-wave parameter estimation, with separate normalizing flows for intrinsic and extrinsic parameters. https://github.com/maanasgoel/MIT-LIGO-Parameter-Splitting-Flows
+- 2023, Machine Learning Engineer Intern, MIT LIGO: self-supervised learning of time-shift symmetries in normalizing flows; co-authored a NeurIPS 2023 paper. https://github.com/maanasgoel/MIT-NeurIPS-Symmetry-Flows
+
+## Projects
+
+Reports and code for all public projects are on GitHub: https://github.com/maanasgoel
+
+Power and hardware:
+- SolarSprint (2026): a scheduler for a solar- and battery-powered AI data center, building on Prof. Benjamin Lee's Curtail to Compute study. On real AI job traces, it tripled the work completed over that study's baseline. Research with Prof. Le Xie's lab at Harvard and Prof. Benjamin Lee at Penn. https://github.com/maanasgoel/SolarSprint
+- Wideband Transimpedance Amplifier (2025): a 45 nm CMOS amplifier for optical receivers, designed and simulated in Cadence, that beat every target spec. https://github.com/maanasgoel/Wideband-TIA-45nm
+- BrakeBright (2025): a smart bike light that senses braking with a motion sensor, brightens automatically, and adjusts to ambient light. https://github.com/maanasgoel/BrakeBright
+- Beat-Frequency Metal Detector (2025): a custom PCB that turns nearby metal into an audible tone, designed, simulated, built, and tested. https://github.com/maanasgoel/Beat-Frequency-Metal-Detector
+- EEase (2025): a local AI workbench for electrical engineers that runs LTspice simulations from plain English, solves problems from your own textbooks with citations, and writes lab reports. https://github.com/maanasgoel/EEase
+
+AI and machine learning:
+- Robo-Analyst (2026): LLM agents read SEC filings with company names hidden, and a blinded model makes each call. Finding: the LLM still recognized 97% of megacaps. https://github.com/maanasgoel/Robo-Analyst
+- Dynamic Portfolio Optimization via Forecasted Covariances (2025): an LSTM forecasts how assets move together, and its portfolio beat portfolios built on classical models (Sharpe 0.49 vs -0.07). https://github.com/maanasgoel/Portfolio-Covariance-Forecasting
+- MoKE: Mixture of Koopman Experts (2025): models nonlinear systems that switch between regimes, and stays stable on long predictions where standard methods diverged. https://github.com/maanasgoel/MoKE-Koopman-Experts
+- Reproducing HAWQ-V3 (2025): reproduced Hessian-based mixed-precision quantization on ResNet-18: a 41% smaller model for under 1 point of accuracy. https://github.com/maanasgoel/HAWQ-V3-Reproduction
+
+## Honors and publications
+
+- 2026: Best Paper Award, Apple Modeling & Simulation Conference
+- 2023: Optimizing Likelihood-free Inference using Self-supervised Neural Symmetry Embeddings, NeurIPS 2023 (Machine Learning and the Physical Sciences), co-author. https://ml4physicalsciences.github.io/2023/files/NeurIPS_ML4PS_2023_69.pdf
+- 2022: US Physics Olympiad (USAPhO) Semifinalist and Honorable Mention: top 200 in the US, and the first semifinalist in St. Paul's School history
+- 2021: AIME Qualifier
+
+## Interests
+
+AI for hardware design; power for AI, from circuit boards to the grid; investing in AI infrastructure (compute, memory, power).
